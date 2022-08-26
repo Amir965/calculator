@@ -1,24 +1,25 @@
-import './App.css';
-import React,{useState} from "react"
+import "./App.css";
+import React, { useState } from "react";
+
 function App() {
-  const [result, setResult] = useState("")
-  const handleClick=(e) => {
-    setResult(result.concat(e.target.name))
-  }
+  const [result, setResult] = useState("");
+  const handleClick = (e) => {
+    setResult(result.concat(e.target.name));
+  };
 
   const clear = () => {
-    setResult("")
-  }
+    setResult("");
+  };
   const backspace = () => {
-    setResult(result.slice(0,-1))
-  }
+    setResult(result.slice(0, -1));
+  };
   const calculate = () => {
     try {
-      setResult(eval(result).toString())
+      setResult(eval(result).toString());
     } catch (error) {
-      setResult("Error")
+      setResult("Error");
     }
-  }
+  };
   return (
     <div className="App">
       <div className="container">
